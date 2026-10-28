@@ -1,30 +1,46 @@
-# Python & Virtual Environments
+# Python & Bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Virtual Environments
 .venv/
 venv/
 env/
 ENV/
-__pycache__/
-*.py[cod]
-*$py.class
+env.bak/
+venv.bak/
 
 # Streamlit Local Secrets
 .streamlit/secrets.toml
+secrets.toml
 
 # Packaging & Archives
 *.zip
+*.tar.gz
 dist/
 build/
+*.egg-info/
 
 # Testing & Coverage
 test-results/
+tests/
 .pytest_cache/
 .coverage
 htmlcov/
 
-# Editor & OS Metadata
+# Editor & IDE Metadata
 .vscode/
 .idea/
+*.sublime-project
+*.sublime-workspace
+
+# OS & Temporary Artifacts
 .DS_Store
 Thumbs.db
 desktop.ini
 *.tmp
+.tmp/
+*.log

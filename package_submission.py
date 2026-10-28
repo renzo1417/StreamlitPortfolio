@@ -5,9 +5,8 @@ from zipfile import ZIP_DEFLATED, ZipFile
 
 ROOT = Path(__file__).resolve().parent
 FILES = ['app.py', 'content.py', 'state.py', 'ui.py', 'styles.css',
-         'requirements.txt', 'requirements-dev.txt', 'README.md',
-         'VERIFICATION.md', 'package_submission.py', '.streamlit/config.toml', '.gitignore']
-DIRECTORIES = ['screens', 'assets', 'tests']
+         'requirements.txt', '.streamlit/config.toml', '.gitignore']
+DIRECTORIES = ['screens', 'assets']
 
 
 def package(destination=None):

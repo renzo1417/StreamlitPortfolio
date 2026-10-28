@@ -140,87 +140,12 @@ SKILL_GROUPS = {
     },
 }
 
-SKILL_RATINGS = {
-    "Tailwind CSS": 5,
-    "Python": 4,
-    "TypeScript": 4,
-    "Next.js": 4,
-    "React": 4,
-    "Svelte 5": 4,
-    "Fabric.js": 4,
-    "GSAP": 4,
-    "HTML5 Canvas": 4,
-    "Gemini API": 4,
-    "Rust": 3,
-    "FastAPI": 3,
-    "Tauri 2": 3,
-    "C": 3,
-    "C++": 3,
-    "Java": 3,
-    "Supabase": 3,
-    "PostgreSQL": 3,
-    "SQLite": 3,
-    "AsyncStorage": 3,
-    "Win32 APIs": 3,
-    "Leaflet": 3,
-    "SMS Gateway": 3,
-}
-
-SKILLS_DATA = [
-    {
-        "Skill": skill,
-        "Category": category,
-        "Self-Assessment (1-5)": SKILL_RATINGS.get(skill, 3),
-        "Practical Application & Context": evidence,
-    }
-    for category, technologies in SKILL_GROUPS.items()
-    for skill, evidence in technologies.items()
-]
-
-# Backward-compatibility alias
-SKILL_PROFICIENCY = SKILLS_DATA
-
-# Aesthetic Core Competencies & Tools Data (Unrated)
-COMPETENCIES_CATALOG = [
-    {
-        "Domain": category,
-        "Tool / Technology": skill,
-        "Practical Application & Project Scope": evidence,
-    }
-    for category, technologies in SKILL_GROUPS.items()
-    for skill, evidence in technologies.items()
-]
-
 DOMAIN_SUMMARIES = [
     {
-        "Domain": "Programming Languages",
-        "Tools & Frameworks": list(SKILL_GROUPS["Programming Languages"].keys()),
-        "Tool Count": len(SKILL_GROUPS["Programming Languages"]),
-        "Practical Scope & Engineering Focus": "Applied AI integrations, typed web architectures, native Win32/Tauri systems, low-level memory & algorithmic foundations.",
-    },
-    {
-        "Domain": "Web & Backend",
-        "Tools & Frameworks": list(SKILL_GROUPS["Web & Backend"].keys()),
-        "Tool Count": len(SKILL_GROUPS["Web & Backend"]),
-        "Practical Scope & Engineering Focus": "Modern reactive UI design systems, full-stack SSR web applications, and high-performance Python REST APIs.",
-    },
-    {
-        "Domain": "Desktop & Creative Tools",
-        "Tools & Frameworks": list(SKILL_GROUPS["Desktop & Creative Tools"].keys()),
-        "Tool Count": len(SKILL_GROUPS["Desktop & Creative Tools"]),
-        "Practical Scope & Engineering Focus": "Procedural 60 FPS graphics, canvas physics, hardware-accelerated timeline animations, and native desktop runtime.",
-    },
-    {
-        "Domain": "Data & Storage",
-        "Tools & Frameworks": list(SKILL_GROUPS["Data & Storage"].keys()),
-        "Tool Count": len(SKILL_GROUPS["Data & Storage"]),
-        "Practical Scope & Engineering Focus": "Cloud database management, authentication, relational schema queries, and embedded local storage.",
-    },
-    {
-        "Domain": "AI & Native Integrations",
-        "Tools & Frameworks": list(SKILL_GROUPS["AI & Native Integrations"].keys()),
-        "Tool Count": len(SKILL_GROUPS["AI & Native Integrations"]),
-        "Practical Scope & Engineering Focus": "Generative AI workflows, native Windows system hooks, geospatial route planning, and offline mobile SMS.",
-    },
+        "Domain": category,
+        "Tools & Frameworks": list(technologies.keys()),
+    }
+    for category, technologies in SKILL_GROUPS.items()
 ]
+
 
