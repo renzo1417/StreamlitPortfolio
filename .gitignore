@@ -1,0 +1,30 @@
+# Python & Virtual Environments
+.venv/
+venv/
+env/
+ENV/
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Streamlit Local Secrets
+.streamlit/secrets.toml
+
+# Packaging & Archives
+*.zip
+dist/
+build/
+
+# Testing & Coverage
+test-results/
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Editor & OS Metadata
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini
+*.tmp

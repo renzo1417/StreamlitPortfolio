@@ -1,0 +1,52 @@
+/* Content classes and documented st-key-* hooks only. Native widget focus,
+   sidebar controls, theme colors, and responsive columns stay available. */
+:root {
+  --portfolio-ink: #111111;
+  --portfolio-muted: #62625D;
+  --portfolio-accent: #52633D;
+  --portfolio-surface: #EFEFEC;
+  --portfolio-border: #DEDEDA;
+}
+.eyebrow {
+  color: var(--portfolio-accent);
+  font-size: .75rem;
+  font-weight: 700;
+  letter-spacing: .14em;
+  margin: 0 0 1rem;
+}
+.st-key-home-hero h1.hero-name {
+  color: var(--portfolio-ink);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: clamp(2.6rem, 5vw, 5.5rem);
+  font-weight: 850;
+  letter-spacing: -.065em;
+  line-height: .98;
+  padding: 0 0 1rem;
+  overflow-wrap: normal;
+}
+.st-key-home-hero { padding-bottom: 1rem; }
+.st-key-home-portrait { width: 100%; max-width: 340px; }
+.sidebar-monogram {
+  font-size: 1.8rem;
+  font-weight: 800;
+  letter-spacing: -.06em;
+  margin: 1rem 0;
+}
+.sidebar-monogram span {
+  color: var(--portfolio-muted);
+  font-size: .65rem;
+  letter-spacing: .12em;
+  vertical-align: middle;
+}
+.media-placeholder {
+  color: var(--portfolio-muted);
+  background: var(--portfolio-surface);
+  border: 1px dashed var(--portfolio-border);
+  border-radius: 12px;
+  padding: 2rem;
+  overflow-wrap: anywhere;
+}
+@media (max-width: 600px) {
+  .st-key-home-hero h1.hero-name { font-size: clamp(2.5rem, 12vw, 4rem); }
+  .eyebrow { letter-spacing: .09em; }
+}
